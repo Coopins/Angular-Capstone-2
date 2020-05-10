@@ -16,7 +16,6 @@ namespace capstone.Models
         public string Alias { get; set; }
         public int Age { get; set; } 
         public bool IsActiveMember {get; set;}
-        public Guid UserID {get;set;}
         public ApplicationUser User {get;set;}
     }
 }
