@@ -11,8 +11,7 @@
            "port": 9222,
            "webRoot": "${workspaceFolder}"
        },
-       
-        { 
+        {
             "name": ".NET Core Launch (web)",
             "type": "coreclr",
             "request": "launch",
