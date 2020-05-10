@@ -9,7 +9,7 @@ using capstone.Data;
 namespace capstone.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200510193221_JusticeLeague")]
+    [Migration("20200510215927_JusticeLeague")]
     partial class JusticeLeague
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -312,9 +312,6 @@ namespace capstone.Data.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid>("UserID")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("UserId")
