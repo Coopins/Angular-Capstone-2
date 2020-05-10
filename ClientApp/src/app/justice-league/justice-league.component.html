@@ -1,0 +1,29 @@
+<h1 id="tableLabel">Teachers</h1>
+
+<p *ngIf="!members"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="members">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of members">
+      <td>{{ s.name }}</td>
+      <td>{{ s.alias }}</td>
+      <td>{{ s.age }}</td>
+      <td>{{ s.isActiveMember }}</td>
+    </tr>
+  </tbody>
+</table>
+ Name
+<input [(ngModel)]="member.name" type="text" name="Name" />
+Alias
+<input [(ngModel)]="member.alias" type="text" name="alias" />
+Age
+<input [(ngModel)]="member.age" name="age" type="number" />
+Is Active Member
+<input [(ngModel)]="member.isActiveMember" name="isActiveMember" type="checkbox"/>
+<button (click)="save()">Save</button>

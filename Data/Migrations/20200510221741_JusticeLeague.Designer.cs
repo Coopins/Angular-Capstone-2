@@ -9,7 +9,7 @@ using capstone.Data;
 namespace capstone.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200510215927_JusticeLeague")]
+    [Migration("20200510221741_JusticeLeague")]
     partial class JusticeLeague
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
