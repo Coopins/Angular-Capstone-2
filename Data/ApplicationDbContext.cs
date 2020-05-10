@@ -16,6 +16,7 @@ namespace capstone.Data
     {
         public IConfiguration Configuration { get; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<JusticeLeagueMember> Members {get;set;}
         public DbSet<Teacher> Teachers { get; set; }
         public ApplicationDbContext(
             DbContextOptions options,
