@@ -38,7 +38,7 @@ import { JusticeLeagueComponent } from './justice-league/justice-league.componen
         { path: 'fetch-data', component: FetchDataComponent, canActivate: [AuthorizeGuard] },
         { path: 'students', component: StudentsComponent, canActivate: [AuthorizeGuard] },
         { path: 'teachers', component: TeacherComponent, canActivate: [AuthorizeGuard] },
-        {path: 'justiceleague', component: JusticeLeagueComponent}
+        {path: 'justiceleague', component: JusticeLeagueComponent, canActivate: [AuthorizeGuard]}
     ])
   ],
   providers: [

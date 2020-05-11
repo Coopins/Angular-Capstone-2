@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { JusticeLeagueMember } from '../interfaces/justice-league-member';
+import { JusticeLeagueService } from '../services/justice-league.service';
 
 @Component({
   selector: 'app-justice-league',
@@ -19,9 +20,15 @@ export class JusticeLeagueComponent implements OnInit {
 
   members: JusticeLeagueMember[] = [];
 
-  constructor() { }
+  constructor(private service: JusticeLeagueService) { }
 
-  ngOnInit() {
+ async ngOnInit() {
+    this.members = await this.service.getMembers();
   }
 
+ async save() {
+const newMember = await this.service.addMember(this.member);
+this.members.push(newMember);
+console.log(newMember);
+}
 }
