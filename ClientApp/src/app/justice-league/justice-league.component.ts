@@ -11,10 +11,9 @@ export class JusticeLeagueComponent implements OnInit {
 
   member: JusticeLeagueMember =
   {
-    Id: 0,
     name: '',
     alias: '',
-    age: 0,
+    age: 1,
   isActiveMember: true,
   };
 
