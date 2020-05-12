@@ -28,7 +28,7 @@ namespace capstone.Controllers
            var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
 
            JusticeLeagueMember[] members = null;
-           _context.Members.Where(m => m.User.Id == userId).ToArray();
+          members = _context.Members.Where(m => m.User.Id == userId).ToArray();
 
            return members;
 

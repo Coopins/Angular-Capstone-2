@@ -12,11 +12,11 @@ export class JusticeLeagueService {
     @Inject('BASE_URL')private baseUrl: string) {}
 
     async getMembers() {
-      return this.httpClient.get<JusticeLeagueMember[]>('${this.baseUrl}justiceleague').toPromise();
+      return this.httpClient.get<JusticeLeagueMember[]>(`${this.baseUrl}justiceleague`).toPromise();
     }
 
     async addMember(member: JusticeLeagueMember) {
-      return await this.httpClient.post<JusticeLeagueMember>('${this.baseUrl}justiceleague', member).toPromise();
+      return await this.httpClient.post<JusticeLeagueMember>(`${this.baseUrl}justiceleague`, member).toPromise();
     }
 
     }
