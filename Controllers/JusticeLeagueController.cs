@@ -36,7 +36,7 @@ namespace capstone.Controllers
         [HttpPost]
         public JusticeLeagueMember Post([FromBody]JusticeLeagueMember member)
         {
-            member.User.Id = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            member.UserId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
  _context.Members.Add(member);
  _context.SaveChanges();
  return member;

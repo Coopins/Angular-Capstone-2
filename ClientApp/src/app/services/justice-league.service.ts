@@ -1,6 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { inject } from '@angular/core/testing';
 import { JusticeLeagueMember } from '../interfaces/justice-league-member';
 
 @Injectable({
@@ -9,8 +8,7 @@ import { JusticeLeagueMember } from '../interfaces/justice-league-member';
 export class JusticeLeagueService {
 
   constructor(
-    private httpClient: HttpClient,
-    @inject('BASE_URL')private baseUrl: string) { }
+    private httpClient: HttpClient) { }
 
     async getMembers() {
       return this.httpClient.get<JusticeLeagueMember[]>('${this.baseUrl}justiceleague').toPromise();

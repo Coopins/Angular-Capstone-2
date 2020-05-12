@@ -16,6 +16,7 @@ namespace capstone.Models
         public string Alias { get; set; }
         public int Age { get; set; } 
         public bool IsActiveMember {get; set;}
+        public string UserId {get; set;}
         public ApplicationUser User {get;set;}
     }
 }
